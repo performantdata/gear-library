@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+body {
+  font-family: sans-serif;
+  background: whitesmoke;
+  margin: 0;
+}
+
+/* main <nav> element, in */
+.navbar-inverse {
+  background-color: hsl(0,0%,13%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+.list-header { background: silver; }
+.rf-dt-shdr-c { background: silver; } /* Why doesn't RF respect the headerClass attribute? */
+.list-row { background: #e0e0e0; }
+.currency-column { text-align: right; }
+
+/* reset the RichFaces styles */
+.rf-edt { overflow: inherit; background-color: inherit; border: inherit; }
+.rf-edt-hdr { background-image: inherit; }
+.rf-dt, .rf-edt-tbl {
+	border: inherit; border-collapse: inherit; border-spacing: inherit; background: inherit;
+}
+.rf-edt-c {
+	border: inherit; height: inherit;
+}
+.rf-dt-c, .rf-dt-shdr-c, .rf-edt-c-cnt, .rf-edt-hdr-c-cnt {
+	border: inherit; padding: 2px; font-size: inherit; white-space: inherit;
+}

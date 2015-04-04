@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:jsf="http://xmlns.jcp.org/jsf"
+  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:f="http://xmlns.jcp.org/jsf/core"
+  >
+
+<ui:composition template="/WEB-INF/templates/simple.xhtml">
+  <ui:define name="meta">
+    <meta property="og:title" content="#{bundle['application.organization.name']} #{bundle['application.name']}"/>
+    <meta property="og:url" content="#{bundle['application.url']}"/>
+    <meta property="og:description" content="#{bundle['application.organization.name']} #{bundle['application.name']} application."/>
+    <meta name="apple-mobile-web-app-title" content="#{bundle['application.apple.title']}"/>
+  </ui:define>
+  
+  <ui:define name="content">
+    <h:outputStylesheet name="css/common.css"/>
+    <ul>
+      <li><a href="gear/search">Search for gear</a></li>
+      <li><a href="gear/">Browse all gear</a></li><!--  comment -->
+    </ul>
+  </ui:define>
+</ui:composition>
+</html>

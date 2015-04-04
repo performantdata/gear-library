@@ -1,0 +1,4 @@
+@charset "UTF-8";
+
+Actor { gradient: none; lineWidth: 0; }
+UseCase { elementIcon: false; }

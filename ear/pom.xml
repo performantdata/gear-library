@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright © 2015 Performant Data LLC. All rights reserved.
+ -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>gear-library</artifactId>
+    <groupId>com.performantdata</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>gear-library-ear</artifactId>
+  <packaging>ear</packaging>
+
+  <name>Gear library EAR</name>
+  <description>The EAR for the parent gear-lending library application.</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>${project.parent.artifactId}-war</artifactId>
+      <version>${project.version}</version>
+      <type>war</type>
+    </dependency>
+  </dependencies>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-ear-plugin</artifactId>
+        <version>2.9</version>
+        <configuration>
+          <version>6</version>
+          <defaultLibBundleDir>lib</defaultLibBundleDir>
+          <modules>
+            <webModule>
+              <groupId>${project.groupId}</groupId>
+              <artifactId>${project.parent.artifactId}-war</artifactId>
+              <!--
+               This could be extracted from WST configuration by unchecking Properties > Maven >
+               "Java EE Integration" > "EAR Project preferences" > "Generate application.xml under
+               the build directory", but the resulting application.xml would override this plug-in's
+               control. See https://issues.sonatype.org/browse/MECLIPSEWTP-58 for the change.
+               -->
+              <contextRoot>/${project.parent.artifactId}</contextRoot>
+            </webModule>
+          </modules>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

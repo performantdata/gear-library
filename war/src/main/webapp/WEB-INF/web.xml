@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://java.sun.com/xml/ns/javaee"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0"
+  >
+
+  <display-name>${project.name}</display-name>
+  <description>${project.description}</description>
+  <welcome-file-list>
+    <welcome-file>index.xhtml</welcome-file>
+  </welcome-file-list>
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+
+  <filter>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+    <!--
+    <init-param>
+      <param-name>logLevel</param-name>
+      <param-value>DEBUG</param-value>
+    </init-param>
+    -->
+  </filter>
+  <filter-mapping>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
+
+  <!-- JavaServer Faces -->
+  <servlet>
+    <servlet-name>Faces servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Faces servlet</servlet-name>
+    <url-pattern>*.xhtml</url-pattern>
+  </servlet-mapping>
+  
+  <!-- RichFaces -->
+  <context-param>
+    <param-name>org.richfaces.enableControlSkinning</param-name>
+    <param-value>false</param-value>
+  </context-param>
+
+<!--
+  <security-role>
+    <description>A member of the club.</description>
+    <role-name>member</role-name>
+  </security-role>
+  <security-role>
+    <description>A subject that manages gear on behalf of the club.</description>
+    <role-name>manager</role-name>
+  </security-role>
+  <security-role>
+    <description>A subject that manages all gear managers.</description>
+    <role-name>officer</role-name>
+  </security-role>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>login page</web-resource-name>
+      <url-pattern>/login</url-pattern>
+    </web-resource-collection>
+    <user-data-constraint>
+      <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+    </user-data-constraint>
+  </security-constraint>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>member resources</web-resource-name>
+      <url-pattern>/member/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>member</role-name>
+    </auth-constraint>
+    <user-data-constraint>
+      <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+    </user-data-constraint>
+  </security-constraint>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>manager resources</web-resource-name>
+      <url-pattern>/manager/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>manager</role-name>
+    </auth-constraint>
+    <user-data-constraint>
+      <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+    </user-data-constraint>
+  </security-constraint>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>officer resources</web-resource-name>
+      <url-pattern>/officer/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>officer</role-name>
+    </auth-constraint>
+    <user-data-constraint>
+      <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+    </user-data-constraint>
+  </security-constraint>
+
+  <login-config>
+    <auth-method>FORM</auth-method>
+    <form-login-config>
+      <form-login-page>/login</form-login-page>
+      <form-error-page>/login?error=true</form-error-page>
+    </form-login-config>
+  </login-config>
+-->
+
+</web-app>

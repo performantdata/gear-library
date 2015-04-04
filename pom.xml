@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright © 2015 Performant Data LLC. All rights reserved.
+ -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>com.performantdata</groupId>
+  <artifactId>gear-library</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <name>Gear library</name>
+  <description>A gear-lending library application for outdoor adventure clubs.</description>
+  <inceptionYear>2015</inceptionYear>
+  <organization>
+    <name>Performant Data LLC</name>
+  </organization>
+  <distributionManagement>
+    <site>
+      <id>website</id>
+      <!-- dummy info so that site:stage can run -->
+      <url>scp://gear-library.performantdata.com/</url>
+    </site>
+  </distributionManagement>
+  <developers>
+    <developer>
+      <name>Michael</name>
+      <organization>Performant Data LLC</organization>
+      <timezone>America/Los_Angeles</timezone>
+    </developer>
+  </developers>
+  
+  <properties>
+    <scala.version>2.11.6</scala.version>
+    <javac.version>1.7</javac.version>
+    <javaee.version>7.0</javaee.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+  </properties>
+
+  <modules>
+    <module>ejb</module>
+    <module>ear</module>
+    <module>war</module>
+  </modules>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>${scala.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>${javaee.version}</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+  
+  <build>
+    <!-- From http://davidb.github.io/scala-maven-plugin/usage.html -->
+    <sourceDirectory>src/main/scala</sourceDirectory>
+    <testSourceDirectory>src/test/scala</testSourceDirectory>
+    
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>2.8</version>
+        </plugin>
+        <plugin>
+          <groupId>net.alchim31.maven</groupId>
+          <artifactId>scala-maven-plugin</artifactId>
+          <version>3.1.6</version>
+        </plugin>
+        
+        <!-- Apparently implicitly used by maven-ejb-plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.1</version>
+          <configuration>
+            <source>${javac.version}</source>
+            <target>${javac.version}</target>
+            <compilerArguments>
+              <endorseddirs>${endorsed.dir}</endorseddirs>
+            </compilerArguments>
+          </configuration>
+        </plugin>
+        
+        <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+        <plugin>
+          <groupId>org.eclipse.m2e</groupId>
+          <artifactId>lifecycle-mapping</artifactId>
+          <version>1.0.0</version>
+          <configuration>
+            <lifecycleMappingMetadata>
+              <pluginExecutions>
+              
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <versionRange>[2.8,)</versionRange>
+                    <goals>
+                      <goal>copy</goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action><ignore /></action>
+                </pluginExecution>
+                
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>net.alchim31.maven</groupId>
+                    <artifactId>scala-maven-plugin</artifactId>
+                    <versionRange>[3.1.6,)</versionRange>
+                    <goals>
+                      <goal>compile</goal>
+                      <goal>testCompile</goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action><ignore /></action>
+                </pluginExecution>
+                
+              </pluginExecutions>
+            </lifecycleMappingMetadata>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+    <!-- http://jira.codehaus.org/browse/MARCHTYPES-35 says why setting the endorsed dir is needed. -->
+    <plugins>
+    
+      <!-- I believe this came from the net.alchim31.maven:scala-archetype-simple archetype. -->
+      <plugin>
+        <groupId>net.alchim31.maven</groupId>
+        <artifactId>scala-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>compile</goal>
+              <goal>testCompile</goal>
+            </goals>
+            <configuration>
+              <args>
+                <arg>-Djava.endorsed.dirs=${endorsed.dir}</arg>
+                <arg>-deprecation</arg>
+                <arg>-explaintypes</arg>
+                <arg>-feature</arg>
+                <arg>-unchecked</arg>
+              </args>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      
+      <!-- This may not be needed; scalac might do all we need. -->
+      <!-- 
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>${javac.version}</source>
+          <target>${javac.version}</target>
+          <compilerArguments>
+            <endorseddirs>${endorsed.dir}</endorseddirs>
+          </compilerArguments>
+        </configuration>
+      </plugin>
+       -->
+
+      <!-- Override the Java SE Common Annotations version with the latest in Java EE. -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>validate</phase>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${endorsed.dir}</outputDirectory>
+              <silent>true</silent>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>javax</groupId>
+                  <artifactId>javaee-endorsed-api</artifactId>
+                  <version>${javaee.version}</version>
+                  <type>jar</type>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    
+    </plugins>
+  </build>
+  
+  <reporting>
+    <plugins>
+      <!--
+       From http://davidb.github.io/scala-maven-plugin/example_doc.html
+       See https://maven.apache.org/plugins/maven-site-plugin/maven-3.html for why we follow the Maven 2.x
+       configuration style, instead of the Maven 3.0 style using <reportPlugins>.
+       -->
+      <plugin>
+        <groupId>net.alchim31.maven</groupId>
+        <artifactId>scala-maven-plugin</artifactId>
+        <version>3.1.6</version><!-- should find this from <pluginManagement>, but still needed for Maven 3.0.4 -->
+      </plugin>
+    </plugins>
+  </reporting>
+</project>

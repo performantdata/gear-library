@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE urlrewrite>
+<urlrewrite>
+
+  <!-- temporary pass-through for JSF resources, until I fix the URLs -->
+
+  <rule>
+    <name>JSF resources</name>
+    <note>Pass through JSF resource URLs.</note>
+    <from>^/javax.faces.resource/</from>
+    <to last="true">-</to>
+  </rule>
+
+  <!-- pass-throughs -->
+
+  <rule>
+    <name>assets</name>
+    <note>Pass through assets.</note>
+    <from>^/assets/</from>
+    <to last="true">-</to>
+  </rule>
+
+  <!-- XHTML pages -->
+
+  <rule>
+    <name>home page</name>
+    <from>^/$</from>
+    <to last="true">/index.xhtml</to>
+  </rule>
+  <rule>
+    <name>subdirectory home pages</name>
+    <from>^/(gear)/$</from>
+    <to last="true">/$1/index.xhtml</to>
+  </rule>
+  <rule>
+    <name>XHTML pages</name>
+    <note>Add ".xhtml" suffixes.</note>
+    <from>^(/login)$</from>
+    <to last="true">$1.xhtml</to>
+  </rule>
+
+  <!-- permanent redirects -->
+
+  <rule>
+    <name>directory redirect</name>
+    <note>Add a slash to unterminated directory names.</note>
+    <from>^/(gear)/$</from>
+    <to type="permanent-redirect" last="true">%{context-path}/$1/</to>
+  </rule>
+
+  <!-- fail! -->
+
+  <rule>
+    <name>invalid URLs</name>
+    <note>All other URLs are invalid.</note>
+    <from>.*</from>
+    <to last="true">/error.xhtml</to>
+  </rule>
+
+</urlrewrite>

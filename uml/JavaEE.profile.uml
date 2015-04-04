@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_KtmwYI-8EeOu0Y0OsMgVew" name="Java EE profile" metaclassReference="_Sqw0MI-8EeOu0Y0OsMgVew _pwxbkI--EeOu0Y0OsMgVew" metamodelReference="_KtmwYY-8EeOu0Y0OsMgVew">
+  <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_z61twY-8EeOu0Y0OsMgVew" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_071l0Y--EeOu0Y0OsMgVew" name="JavaEEprofile" nsURI="http:///schemas/JavaEEprofile/_071l0I--EeOu0Y0OsMgVew/1" nsPrefix="JavaEEprofile">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_08K9AI--EeOu0Y0OsMgVew" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_08K9AY--EeOu0Y0OsMgVew" key="Version" value="0.0.2"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_08K9Ao--EeOu0Y0OsMgVew" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_08K9A4--EeOu0Y0OsMgVew" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_08K9BI--EeOu0Y0OsMgVew" key="Date" value="2014-02-06"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_08K9BY--EeOu0Y0OsMgVew" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_071l0o--EeOu0Y0OsMgVew" name="operatingsystem">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_071l04--EeOu0Y0OsMgVew" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_VhoToI-8EeOu0Y0OsMgVew"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_071l1I--EeOu0Y0OsMgVew" name="base_ExecutionEnvironment" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//ExecutionEnvironment"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_071l1o--EeOu0Y0OsMgVew" name="JavaEE7container">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_071l14--EeOu0Y0OsMgVew" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_b55dQI-8EeOu0Y0OsMgVew"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_071l2I--EeOu0Y0OsMgVew" name="base_ExecutionEnvironment" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//ExecutionEnvironment"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_071l2o--EeOu0Y0OsMgVew" name="EAR">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_071l24--EeOu0Y0OsMgVew" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_sUQsAI--EeOu0Y0OsMgVew"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_071l3I--EeOu0Y0OsMgVew" name="base_Artifact" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Artifact"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_z6-3sI-8EeOu0Y0OsMgVew" name="JavaEEprofile" nsURI="http:///schemas/JavaEEprofile/_z61twI-8EeOu0Y0OsMgVew/0" nsPrefix="JavaEEprofile">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_z7NhMI-8EeOu0Y0OsMgVew" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_z7NhMY-8EeOu0Y0OsMgVew" key="Version" value="0.0.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_z7NhMo-8EeOu0Y0OsMgVew" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_z7NhM4-8EeOu0Y0OsMgVew" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_z7NhNI-8EeOu0Y0OsMgVew" key="Date" value="2014-02-06"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_z7NhNY-8EeOu0Y0OsMgVew" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z6-3sY-8EeOu0Y0OsMgVew" name="operatingsystem">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_z6-3so-8EeOu0Y0OsMgVew" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_VhoToI-8EeOu0Y0OsMgVew"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z6-3s4-8EeOu0Y0OsMgVew" name="base_ExecutionEnvironment" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//ExecutionEnvironment"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_z6-3tY-8EeOu0Y0OsMgVew" name="JavaEE7container">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_z6-3to-8EeOu0Y0OsMgVew" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_b55dQI-8EeOu0Y0OsMgVew"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z6-3t4-8EeOu0Y0OsMgVew" name="base_ExecutionEnvironment" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//ExecutionEnvironment"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_Sqw0MI-8EeOu0Y0OsMgVew" alias="ExecutionEnvironment">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ExecutionEnvironment"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_pwxbkI--EeOu0Y0OsMgVew" alias="Artifact">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Artifact"/>
+  </elementImport>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_KtmwYY-8EeOu0Y0OsMgVew">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_KtmwYo-8EeOu0Y0OsMgVew">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_VhoToI-8EeOu0Y0OsMgVew" name="operating system">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ametkI-8EeOu0Y0OsMgVew" name="base_ExecutionEnvironment" association="_amiX8I-8EeOu0Y0OsMgVew">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ExecutionEnvironment"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_amiX8I-8EeOu0Y0OsMgVew" name="E_operating system_ExecutionEnvironment1" memberEnd="_amiX8Y-8EeOu0Y0OsMgVew _ametkI-8EeOu0Y0OsMgVew">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_amiX8Y-8EeOu0Y0OsMgVew" name="extension_operating system" type="_VhoToI-8EeOu0Y0OsMgVew" aggregation="composite" association="_amiX8I-8EeOu0Y0OsMgVew"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_b55dQI-8EeOu0Y0OsMgVew" name="Java EE 7 container">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_m_lYQI-8EeOu0Y0OsMgVew" name="base_ExecutionEnvironment" association="_m_obkI-8EeOu0Y0OsMgVew">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ExecutionEnvironment"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_m_obkI-8EeOu0Y0OsMgVew" name="E_Java EE 7 container_ExecutionEnvironment1" memberEnd="_m_obkY-8EeOu0Y0OsMgVew _m_lYQI-8EeOu0Y0OsMgVew">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_m_obkY-8EeOu0Y0OsMgVew" name="extension_Java EE 7 container" type="_b55dQI-8EeOu0Y0OsMgVew" aggregation="composite" association="_m_obkI-8EeOu0Y0OsMgVew"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_sUQsAI--EeOu0Y0OsMgVew" name="EAR">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_yKT5YI--EeOu0Y0OsMgVew" name="base_Artifact" association="_yKYK0I--EeOu0Y0OsMgVew">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Artifact"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_yKYK0I--EeOu0Y0OsMgVew" name="E_EAR_Artifact1" memberEnd="_yKYK0Y--EeOu0Y0OsMgVew _yKT5YI--EeOu0Y0OsMgVew">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_yKYK0Y--EeOu0Y0OsMgVew" name="extension_EAR" type="_sUQsAI--EeOu0Y0OsMgVew" aggregation="composite" association="_yKYK0I--EeOu0Y0OsMgVew"/>
+  </packagedElement>
+</uml:Profile>

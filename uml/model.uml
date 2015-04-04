@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:JavaEEprofile="http:///schemas/JavaEEprofile/_071l0I--EeOu0Y0OsMgVew/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/JavaEEprofile/_071l0I--EeOu0Y0OsMgVew/1 JavaEE.profile.uml#_071l0Y--EeOu0Y0OsMgVew">
+  <uml:Model xmi:id="_2OaNoIuwEeOeVdYdFpe1RA" name="Gear library management system model">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_2OaNoYuwEeOeVdYdFpe1RA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_l-e6wIxSEeOcnasP0-fU9Q">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://UML_PROFILES/StandardL2.profile.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_AhuHcJt-EeOBt6cFMMM3AA" name="actors">
+      <packagedElement xmi:type="uml:Actor" xmi:id="_bg5SoIwzEeOcnasP0-fU9Q" name="Sysad"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_ZRtP8Iu_EeOeVdYdFpe1RA" name="Person"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_HUXrwJrVEeOxZJBhdnc-IA" name="Member">
+        <generalization xmi:type="uml:Generalization" xmi:id="_LFBggNAAEeSFhbhURo14kw" general="_uG_q8M__EeSFhbhURo14kw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_88A4oIuxEeOeVdYdFpe1RA" name="Gear officer">
+        <generalization xmi:type="uml:Generalization" xmi:id="_KA5jcJrVEeOxZJBhdnc-IA" general="_HUXrwJrVEeOxZJBhdnc-IA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_MiMKAIu3EeOeVdYdFpe1RA" name="A_gear officer_edit an asset" memberEnd="_MiMKAYu3EeOeVdYdFpe1RA _MiMKBIu3EeOeVdYdFpe1RA">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_MiMKAYu3EeOeVdYdFpe1RA" name="gear officer" type="_88A4oIuxEeOeVdYdFpe1RA" association="_MiMKAIu3EeOeVdYdFpe1RA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MiMKAou3EeOeVdYdFpe1RA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MiMKA4u3EeOeVdYdFpe1RA" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_MiMKBIu3EeOeVdYdFpe1RA" name="edit an asset" type="_c6tC0IuyEeOeVdYdFpe1RA" association="_MiMKAIu3EeOeVdYdFpe1RA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MiMKBYu3EeOeVdYdFpe1RA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MiMKBou3EeOeVdYdFpe1RA" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_fvcIYIu_EeOeVdYdFpe1RA" name="Anyone_view the assets" memberEnd="_fvcIYYu_EeOeVdYdFpe1RA _fvcIZIu_EeOeVdYdFpe1RA">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_fvcIYYu_EeOeVdYdFpe1RA" name="anyone" type="_ZRtP8Iu_EeOeVdYdFpe1RA" association="_fvcIYIu_EeOeVdYdFpe1RA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fvcIYou_EeOeVdYdFpe1RA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fvcIY4u_EeOeVdYdFpe1RA" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_fvcIZIu_EeOeVdYdFpe1RA" name="view the assets" type="_bBekcIu_EeOeVdYdFpe1RA" association="_fvcIYIu_EeOeVdYdFpe1RA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fvcIZYu_EeOeVdYdFpe1RA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fvcIZou_EeOeVdYdFpe1RA" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_eW7EkIwzEeOcnasP0-fU9Q" name="A_sysad_load authentication data" memberEnd="_eW7EkYwzEeOcnasP0-fU9Q _eW7ElIwzEeOcnasP0-fU9Q">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_eW7EkYwzEeOcnasP0-fU9Q" name="sysad" type="_bg5SoIwzEeOcnasP0-fU9Q" association="_eW7EkIwzEeOcnasP0-fU9Q">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eW7EkowzEeOcnasP0-fU9Q" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eW7Ek4wzEeOcnasP0-fU9Q" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_eW7ElIwzEeOcnasP0-fU9Q" name="load authentication data" type="_SlyY0IwzEeOcnasP0-fU9Q" association="_eW7EkIwzEeOcnasP0-fU9Q">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eW7ElYwzEeOcnasP0-fU9Q" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eW7ElowzEeOcnasP0-fU9Q" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_n_hXgJrOEeOxZJBhdnc-IA" name="A_gear officer_check in assets" memberEnd="_n_hXgZrOEeOxZJBhdnc-IA _n_hXhJrOEeOxZJBhdnc-IA">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_n_hXgZrOEeOxZJBhdnc-IA" name="gear officer" type="_88A4oIuxEeOeVdYdFpe1RA" association="_n_hXgJrOEeOxZJBhdnc-IA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_n_hXgprOEeOxZJBhdnc-IA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_n_hXg5rOEeOxZJBhdnc-IA" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_n_hXhJrOEeOxZJBhdnc-IA" name="check in assets" type="_k9BP0JrOEeOxZJBhdnc-IA" association="_n_hXgJrOEeOxZJBhdnc-IA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_n_hXhZrOEeOxZJBhdnc-IA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_n_hXhprOEeOxZJBhdnc-IA" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_zjJywJrOEeOxZJBhdnc-IA" name="A_gear officer_check out assets" memberEnd="_zjJywZrOEeOxZJBhdnc-IA _zjJyxJrOEeOxZJBhdnc-IA">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_zjJywZrOEeOxZJBhdnc-IA" name="gear officer" type="_88A4oIuxEeOeVdYdFpe1RA" association="_zjJywJrOEeOxZJBhdnc-IA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zjJywprOEeOxZJBhdnc-IA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zjJyw5rOEeOxZJBhdnc-IA" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_zjJyxJrOEeOxZJBhdnc-IA" name="check out assets" type="_t8KVEJrOEeOxZJBhdnc-IA" association="_zjJywJrOEeOxZJBhdnc-IA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zjJyxZrOEeOxZJBhdnc-IA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zjJyxprOEeOxZJBhdnc-IA" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_uLTgIJrVEeOxZJBhdnc-IA" name="A_member_identify desired assets" memberEnd="_uLTgIZrVEeOxZJBhdnc-IA _uLTgJJrVEeOxZJBhdnc-IA">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_uLTgIZrVEeOxZJBhdnc-IA" name="member" type="_HUXrwJrVEeOxZJBhdnc-IA" association="_uLTgIJrVEeOxZJBhdnc-IA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uLTgIprVEeOxZJBhdnc-IA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uLTgI5rVEeOxZJBhdnc-IA" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_uLTgJJrVEeOxZJBhdnc-IA" name="identify desired assets" type="_lKjRUJrVEeOxZJBhdnc-IA" association="_uLTgIJrVEeOxZJBhdnc-IA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uLTgJZrVEeOxZJBhdnc-IA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uLTgJprVEeOxZJBhdnc-IA" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_VBREIJrWEeOxZJBhdnc-IA" name="A member presents borrowed assets" memberEnd="_VBREIZrWEeOxZJBhdnc-IA _VBREJJrWEeOxZJBhdnc-IA">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_VBREIZrWEeOxZJBhdnc-IA" name="member" type="_HUXrwJrVEeOxZJBhdnc-IA" association="_VBREIJrWEeOxZJBhdnc-IA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VBREIprWEeOxZJBhdnc-IA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VBREI5rWEeOxZJBhdnc-IA" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_VBREJJrWEeOxZJBhdnc-IA" name="present borrowed assets" type="_9mKroJrVEeOxZJBhdnc-IA" association="_VBREIJrWEeOxZJBhdnc-IA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VBREJZrWEeOxZJBhdnc-IA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VBREJprWEeOxZJBhdnc-IA" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_y4SSYJsyEeOBt6cFMMM3AA" name="A gear officer is presented borrowed assets" memberEnd="_y4SSYZsyEeOBt6cFMMM3AA _y4SSZJsyEeOBt6cFMMM3AA">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_y4SSYZsyEeOBt6cFMMM3AA" name="gear officer" type="_88A4oIuxEeOeVdYdFpe1RA" association="_y4SSYJsyEeOBt6cFMMM3AA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_y4SSYpsyEeOBt6cFMMM3AA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_y4SSY5syEeOBt6cFMMM3AA" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_y4SSZJsyEeOBt6cFMMM3AA" name="present borrowed assets" type="_9mKroJrVEeOxZJBhdnc-IA" association="_y4SSYJsyEeOBt6cFMMM3AA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_y4SSZZsyEeOBt6cFMMM3AA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_y4SSZpsyEeOBt6cFMMM3AA" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5YWx0M_8EeSFhbhURo14kw" name="Anyone_confirm e-mail address" memberEnd="_5YWx0c_8EeSFhbhURo14kw _5YWx1M_8EeSFhbhURo14kw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_5YWx0c_8EeSFhbhURo14kw" name="anyone" type="_ZRtP8Iu_EeOeVdYdFpe1RA" association="_5YWx0M_8EeSFhbhURo14kw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5YWx0s_8EeSFhbhURo14kw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5YWx08_8EeSFhbhURo14kw" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_5YWx1M_8EeSFhbhURo14kw" name="confirm e-mail address" type="_ij47gM_8EeSFhbhURo14kw" association="_5YWx0M_8EeSFhbhURo14kw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5YWx1c_8EeSFhbhURo14kw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5YWx1s_8EeSFhbhURo14kw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_TZcqQM__EeSFhbhURo14kw" name="Anyone_request e-mail address confirmation" memberEnd="_TZcqQc__EeSFhbhURo14kw _TZcqRM__EeSFhbhURo14kw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_TZcqQc__EeSFhbhURo14kw" name="anyone" type="_ZRtP8Iu_EeOeVdYdFpe1RA" association="_TZcqQM__EeSFhbhURo14kw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TZcqQs__EeSFhbhURo14kw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TZcqQ8__EeSFhbhURo14kw" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_TZcqRM__EeSFhbhURo14kw" name="request e-mail address confirmation" type="_3OyLUM_-EeSFhbhURo14kw" association="_TZcqQM__EeSFhbhURo14kw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TZcqRc__EeSFhbhURo14kw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TZcqRs__EeSFhbhURo14kw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_ZdxuwNAAEeSFhbhURo14kw" name="A_user_reset passphrase" memberEnd="_ZdxuwdAAEeSFhbhURo14kw _ZdxuxNAAEeSFhbhURo14kw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_ZdxuwdAAEeSFhbhURo14kw" name="user" type="_uG_q8M__EeSFhbhURo14kw" association="_ZdxuwNAAEeSFhbhURo14kw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZdxuwtAAEeSFhbhURo14kw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Zdxuw9AAEeSFhbhURo14kw" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_ZdxuxNAAEeSFhbhURo14kw" name="reset password" type="_mCMHAM__EeSFhbhURo14kw" association="_ZdxuwNAAEeSFhbhURo14kw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZdxuxdAAEeSFhbhURo14kw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZdxuxtAAEeSFhbhURo14kw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_1UrSQNACEeSFhbhURo14kw" name="A_user_request passphrase reset" memberEnd="_1UrSQdACEeSFhbhURo14kw _1UrSRNACEeSFhbhURo14kw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_1UrSQdACEeSFhbhURo14kw" name="user" type="_uG_q8M__EeSFhbhURo14kw" association="_1UrSQNACEeSFhbhURo14kw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1UrSQtACEeSFhbhURo14kw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1UrSQ9ACEeSFhbhURo14kw" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_1UrSRNACEeSFhbhURo14kw" name="request password reset" type="_Ub_lANACEeSFhbhURo14kw" association="_1UrSQNACEeSFhbhURo14kw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1UrSRdACEeSFhbhURo14kw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1UrSRtACEeSFhbhURo14kw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_YKdlYNADEeSFhbhURo14kw" name="A_user_apply for membership" memberEnd="_YKdlYdADEeSFhbhURo14kw _YKdlZNADEeSFhbhURo14kw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_YKdlYdADEeSFhbhURo14kw" name="user" type="_uG_q8M__EeSFhbhURo14kw" association="_YKdlYNADEeSFhbhURo14kw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YKdlYtADEeSFhbhURo14kw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YKdlY9ADEeSFhbhURo14kw" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_YKdlZNADEeSFhbhURo14kw" name="apply for membership" type="_QQexYNADEeSFhbhURo14kw" association="_YKdlYNADEeSFhbhURo14kw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YKdlZdADEeSFhbhURo14kw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YKdlZtADEeSFhbhURo14kw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_L1SjANAEEeSFhbhURo14kw" name="A_membership officer_record membership" memberEnd="_L1SjAdAEEeSFhbhURo14kw _L1SjBNAEEeSFhbhURo14kw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_L1SjAdAEEeSFhbhURo14kw" name="membership officer" type="_hYjFkNADEeSFhbhURo14kw" association="_L1SjANAEEeSFhbhURo14kw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L1SjAtAEEeSFhbhURo14kw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_L1SjA9AEEeSFhbhURo14kw" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_L1SjBNAEEeSFhbhURo14kw" name="record membership" type="_DLjtENAEEeSFhbhURo14kw" association="_L1SjANAEEeSFhbhURo14kw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L1SjBdAEEeSFhbhURo14kw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_L1SjBtAEEeSFhbhURo14kw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_RGb3ENAFEeSFhbhURo14kw" name="A_user_make membership payment" memberEnd="_RGb3EdAFEeSFhbhURo14kw _RGb3FNAFEeSFhbhURo14kw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_RGb3EdAFEeSFhbhURo14kw" name="user" type="_uG_q8M__EeSFhbhURo14kw" association="_RGb3ENAFEeSFhbhURo14kw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RGb3EtAFEeSFhbhURo14kw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RGb3E9AFEeSFhbhURo14kw" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_RGb3FNAFEeSFhbhURo14kw" name="make membership payment" type="_KbkhkNAFEeSFhbhURo14kw" association="_RGb3ENAFEeSFhbhURo14kw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RGb3FdAFEeSFhbhURo14kw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RGb3FtAFEeSFhbhURo14kw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_VaMLQNAFEeSFhbhURo14kw" name="A_membership officer_receive membership payment" memberEnd="_VaMLQdAFEeSFhbhURo14kw _VaMLRNAFEeSFhbhURo14kw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_VaMLQdAFEeSFhbhURo14kw" name="membership officer" type="_hYjFkNADEeSFhbhURo14kw" association="_VaMLQNAFEeSFhbhURo14kw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VaMLQtAFEeSFhbhURo14kw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VaMLQ9AFEeSFhbhURo14kw" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_VaMLRNAFEeSFhbhURo14kw" name="make membership payment" type="_KbkhkNAFEeSFhbhURo14kw" association="_VaMLQNAFEeSFhbhURo14kw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VaMLRdAFEeSFhbhURo14kw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VaMLRtAFEeSFhbhURo14kw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_d80WoJxGEeOTzKL6f7pNTg" name="model">
+      <packagedElement xmi:type="uml:Class" xmi:id="_OTEVcJuUEeOBt6cFMMM3AA" name="Asset"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_2olFwJxGEeOTzKL6f7pNTg" name="LoanRequest">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="__APUQJxGEeOTzKL6f7pNTg" name="asset" type="_OTEVcJuUEeOBt6cFMMM3AA" aggregation="shared" association="__Al5kJxGEeOTzKL6f7pNTg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__APUQZxGEeOTzKL6f7pNTg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__APUQpxGEeOTzKL6f7pNTg" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="__Al5kJxGEeOTzKL6f7pNTg" name="checkOut_asset_1" memberEnd="__Al5kZxGEeOTzKL6f7pNTg __APUQJxGEeOTzKL6f7pNTg" navigableOwnedEnd="__Al5kZxGEeOTzKL6f7pNTg">
+        <ownedEnd xmi:type="uml:Property" xmi:id="__Al5kZxGEeOTzKL6f7pNTg" name="checkOut" type="_2olFwJxGEeOTzKL6f7pNTg" association="__Al5kJxGEeOTzKL6f7pNTg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__Al5kpxGEeOTzKL6f7pNTg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__Al5k5xGEeOTzKL6f7pNTg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_ed7yUIvBEeOeVdYdFpe1RA" name="Gear library system" useCase="_bBekcIu_EeOeVdYdFpe1RA _c6tC0IuyEeOeVdYdFpe1RA _k9BP0JrOEeOxZJBhdnc-IA _t8KVEJrOEeOxZJBhdnc-IA _lKjRUJrVEeOxZJBhdnc-IA _9mKroJrVEeOxZJBhdnc-IA">
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_bBekcIu_EeOeVdYdFpe1RA" name="View assets" subject="_ed7yUIvBEeOeVdYdFpe1RA"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_lKjRUJrVEeOxZJBhdnc-IA" name="Identify desired assets" subject="_ed7yUIvBEeOeVdYdFpe1RA"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_9mKroJrVEeOxZJBhdnc-IA" name="Present borrowed assets" subject="_ed7yUIvBEeOeVdYdFpe1RA"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_c6tC0IuyEeOeVdYdFpe1RA" name="Edit an asset" subject="_ed7yUIvBEeOeVdYdFpe1RA">
+        <include xmi:type="uml:Include" xmi:id="_FS37QIvFEeOeVdYdFpe1RA" addition="_Bgt4QIvFEeOeVdYdFpe1RA"/>
+      </ownedUseCase>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_k9BP0JrOEeOxZJBhdnc-IA" name="Check in assets" subject="_ed7yUIvBEeOeVdYdFpe1RA">
+        <include xmi:type="uml:Include" xmi:id="_qptF0JrOEeOxZJBhdnc-IA" addition="_Bgt4QIvFEeOeVdYdFpe1RA"/>
+        <include xmi:type="uml:Include" xmi:id="_9mXf8JrVEeOxZJBhdnc-IA" addition="_9mKroJrVEeOxZJBhdnc-IA"/>
+      </ownedUseCase>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_t8KVEJrOEeOxZJBhdnc-IA" name="Check out assets" subject="_ed7yUIvBEeOeVdYdFpe1RA">
+        <include xmi:type="uml:Include" xmi:id="_xqXsMJrOEeOxZJBhdnc-IA" addition="_Bgt4QIvFEeOeVdYdFpe1RA"/>
+        <include xmi:type="uml:Include" xmi:id="_lKxTwJrVEeOxZJBhdnc-IA" addition="_lKjRUJrVEeOxZJBhdnc-IA"/>
+      </ownedUseCase>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_LUECMIw0EeOcnasP0-fU9Q" name="Operating system" useCase="_N3BuMIw0EeOcnasP0-fU9Q">
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_N3BuMIw0EeOcnasP0-fU9Q" name="Authenticate" subject="_LUECMIw0EeOcnasP0-fU9Q"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Device" xmi:id="_VMG8II-nEeOu0Y0OsMgVew" name="server">
+      <nestedClassifier xmi:type="uml:ExecutionEnvironment" xmi:id="_ScFPEI-oEeOu0Y0OsMgVew" name="Debian Linux">
+        <nestedClassifier xmi:type="uml:ExecutionEnvironment" xmi:id="_T3SBwI-oEeOu0Y0OsMgVew" name="LXC">
+          <nestedClassifier xmi:type="uml:ExecutionEnvironment" xmi:id="_XtAWII-oEeOu0Y0OsMgVew" name="WildFly 8">
+            <nestedClassifier xmi:type="uml:Artifact" xmi:id="_bU-gYI--EeOu0Y0OsMgVew" name="gear-library.ear" fileName="Artifact1.file"/>
+            <deployment xmi:type="uml:Deployment" xmi:id="_tcl7II_AEeOu0Y0OsMgVew" name="EAR deployment" client="_XtAWII-oEeOu0Y0OsMgVew _bU-gYI--EeOu0Y0OsMgVew" supplier="_XtAWII-oEeOu0Y0OsMgVew"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Artifact" xmi:id="_LgUC4I_AEeOu0Y0OsMgVew" name="gear-library.h2.db" fileName="Artifact1.file"/>
+        </nestedClassifier>
+      </nestedClassifier>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="__8b6kI_AEeOu0Y0OsMgVew" name="GearLibraryDS" client="_XtAWII-oEeOu0Y0OsMgVew" supplier="_LgUC4I_AEeOu0Y0OsMgVew"/>
+    <packagedElement xmi:type="uml:Activity" xmi:id="_Itug0JrUEeOxZJBhdnc-IA" name="Checkout" node="_ESVI4JxbEeOTzKL6f7pNTg _kU-7IJxdEeOTzKL6f7pNTg _aelkIJxlEeOTzKL6f7pNTg" group="_XTz1wJxbEeOTzKL6f7pNTg">
+      <edge xmi:type="uml:ControlFlow" xmi:id="_5ph20JxdEeOTzKL6f7pNTg" name="ControlFlow2" target="_XTz1wJxbEeOTzKL6f7pNTg" source="_kU-7IJxdEeOTzKL6f7pNTg"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_5cDz0JxjEeOTzKL6f7pNTg" name="ControlFlow4" target="_3kCUgJxeEeOTzKL6f7pNTg" source="_2JZwQJxjEeOTzKL6f7pNTg"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_GSTGcJxkEeOTzKL6f7pNTg" name="ControlFlow5" target="_C4LI8JxkEeOTzKL6f7pNTg" source="_3kCUgJxeEeOTzKL6f7pNTg"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_hWeecJxkEeOTzKL6f7pNTg" name="another asset" target="_do_gEJxkEeOTzKL6f7pNTg" source="_C4LI8JxkEeOTzKL6f7pNTg">
+        <guard xmi:type="uml:LiteralBoolean" xmi:id="_gyr_MJ0EEeOOAe8S0LMyxQ" name="yes" value="true"/>
+      </edge>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_K-LxUJxlEeOTzKL6f7pNTg" name="ObjectFlow1" target="_FSQwUJxlEeOTzKL6f7pNTg" source="_8OPyIJxkEeOTzKL6f7pNTg">
+        <guard xmi:type="uml:LiteralBoolean" xmi:id="_K-ONkJxlEeOTzKL6f7pNTg" value="true"/>
+        <weight xmi:type="uml:LiteralInteger" xmi:id="_K-ONkZxlEeOTzKL6f7pNTg" value="1"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_cFFn4JxlEeOTzKL6f7pNTg" name="ControlFlow6" target="_aelkIJxlEeOTzKL6f7pNTg" source="_ESVI4JxbEeOTzKL6f7pNTg"/>
+      <group xmi:type="uml:LoopNode" xmi:id="_XTz1wJxbEeOTzKL6f7pNTg" name="Select assets for checkout" incoming="_5ph20JxdEeOTzKL6f7pNTg">
+        <variable xmi:type="uml:Variable" xmi:id="_tiftIJ0ZEeOvQfEcJJy_rQ" name="Variable1"/>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_3kCUgJxeEeOTzKL6f7pNTg" name="Select an available asset" incoming="_5cDz0JxjEeOTzKL6f7pNTg" outgoing="_GSTGcJxkEeOTzKL6f7pNTg">
+          <outputValue xmi:type="uml:OutputPin" xmi:id="_UqLlMJ0YEeOvQfEcJJy_rQ" name="asset">
+            <upperBound xmi:type="uml:LiteralInteger" xmi:id="_UqOBcJ0YEeOvQfEcJJy_rQ" value="1"/>
+          </outputValue>
+        </node>
+        <node xmi:type="uml:InitialNode" xmi:id="_2JZwQJxjEeOTzKL6f7pNTg" name="InitialNode1" outgoing="_5cDz0JxjEeOTzKL6f7pNTg"/>
+        <node xmi:type="uml:DecisionNode" xmi:id="_C4LI8JxkEeOTzKL6f7pNTg" name="another asset?" incoming="_GSTGcJxkEeOTzKL6f7pNTg" outgoing="_hWeecJxkEeOTzKL6f7pNTg"/>
+        <node xmi:type="uml:ActivityFinalNode" xmi:id="_do_gEJxkEeOTzKL6f7pNTg" name="ActivityFinalNode1" incoming="_hWeecJxkEeOTzKL6f7pNTg"/>
+        <result xmi:type="uml:OutputPin" xmi:id="_8OPyIJxkEeOTzKL6f7pNTg" name="asset list" outgoing="_K-LxUJxlEeOTzKL6f7pNTg">
+          <upperBound xmi:type="uml:LiteralInteger" xmi:id="_8OQZMJxkEeOTzKL6f7pNTg" value="1"/>
+        </result>
+      </group>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_ESVI4JxbEeOTzKL6f7pNTg" name="Check out assets to member" outgoing="_cFFn4JxlEeOTzKL6f7pNTg">
+        <inputValue xmi:type="uml:ActionInputPin" xmi:id="_FSQwUJxlEeOTzKL6f7pNTg" name="asset list" incoming="_K-LxUJxlEeOTzKL6f7pNTg">
+          <upperBound xmi:type="uml:LiteralInteger" xmi:id="_FSR-cJxlEeOTzKL6f7pNTg" value="1"/>
+        </inputValue>
+      </node>
+      <node xmi:type="uml:InitialNode" xmi:id="_kU-7IJxdEeOTzKL6f7pNTg" name="initial node" outgoing="_5ph20JxdEeOTzKL6f7pNTg"/>
+      <node xmi:type="uml:ActivityFinalNode" xmi:id="_aelkIJxlEeOTzKL6f7pNTg" name="ActivityFinalNode1" incoming="_cFFn4JxlEeOTzKL6f7pNTg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_KbkhkNAFEeSFhbhURo14kw" name="Membership payment"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_K4AVAM_8EeSFhbhURo14kw" name="Membership system">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_QQexYNADEeSFhbhURo14kw" name="Apply for membership">
+        <include xmi:type="uml:Include" xmi:id="_2IL9YNADEeSFhbhURo14kw" addition="_Bgt4QIvFEeOeVdYdFpe1RA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_DLjtENAEEeSFhbhURo14kw" name="Record membership">
+        <include xmi:type="uml:Include" xmi:id="_Ob9DQNAEEeSFhbhURo14kw" addition="_Bgt4QIvFEeOeVdYdFpe1RA"/>
+        <include xmi:type="uml:Include" xmi:id="_41Ek8NAEEeSFhbhURo14kw" addition="_zAiagNAEEeSFhbhURo14kw"/>
+        <include xmi:type="uml:Include" xmi:id="_VpMbINAGEeSFhbhURo14kw" addition="_KbkhkNAFEeSFhbhURo14kw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_zAiagNAEEeSFhbhURo14kw" name="Add to e-mail list"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_NAHEkIxFEeOcnasP0-fU9Q" name="Security system" useCase="_SlyY0IwzEeOcnasP0-fU9Q _Bgt4QIvFEeOeVdYdFpe1RA">
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_SlyY0IwzEeOcnasP0-fU9Q" name="Load authentication data" subject="_NAHEkIxFEeOcnasP0-fU9Q">
+        <include xmi:type="uml:Include" xmi:id="_THHHwIw0EeOcnasP0-fU9Q" addition="_N3BuMIw0EeOcnasP0-fU9Q"/>
+      </ownedUseCase>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_Bgt4QIvFEeOeVdYdFpe1RA" name="Authenticate" subject="_NAHEkIxFEeOcnasP0-fU9Q"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_ij47gM_8EeSFhbhURo14kw" name="Confirm e-mail address"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_3OyLUM_-EeSFhbhURo14kw" name="Request e-mail address confirmation"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_mCMHAM__EeSFhbhURo14kw" name="Reset passphrase"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_Ub_lANACEeSFhbhURo14kw" name="Request passphrase reset"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_mgZgcNAUEeSFhbhURo14kw" name="Change passphrase">
+        <include xmi:type="uml:Include" xmi:id="_4mDeQNAUEeSFhbhURo14kw" addition="_Bgt4QIvFEeOeVdYdFpe1RA"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_uG_q8M__EeSFhbhURo14kw" name="User">
+      <generalization xmi:type="uml:Generalization" xmi:id="_6ny5EM__EeSFhbhURo14kw" general="_ZRtP8Iu_EeOeVdYdFpe1RA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_hYjFkNADEeSFhbhURo14kw" name="Membership officer">
+      <generalization xmi:type="uml:Generalization" xmi:id="_npYxgNADEeSFhbhURo14kw" general="_HUXrwJrVEeOxZJBhdnc-IA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_9TF1INAUEeSFhbhURo14kw" name="A_user_change passphrase" memberEnd="_9TF1IdAUEeSFhbhURo14kw _9TF1JNAUEeSFhbhURo14kw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_9TF1IdAUEeSFhbhURo14kw" name="user" type="_uG_q8M__EeSFhbhURo14kw" association="_9TF1INAUEeSFhbhURo14kw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9TF1ItAUEeSFhbhURo14kw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9TF1I9AUEeSFhbhURo14kw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_9TF1JNAUEeSFhbhURo14kw" name="change password" type="_mgZgcNAUEeSFhbhURo14kw" association="_9TF1INAUEeSFhbhURo14kw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9TF1JdAUEeSFhbhURo14kw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9TF1JtAUEeSFhbhURo14kw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_pGNfsIxdEeOcnasP0-fU9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pGoWcIxdEeOcnasP0-fU9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/StandardL2.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_4kdkQI-8EeOu0Y0OsMgVew">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4lCzEI-8EeOu0Y0OsMgVew" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="JavaEE.profile.uml#_071l0Y--EeOu0Y0OsMgVew"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="JavaEE.profile.uml#_KtmwYI-8EeOu0Y0OsMgVew"/>
+    </profileApplication>
+  </uml:Model>
+  <standard:Subsystem xmi:id="_r4Tz4IxdEeOcnasP0-fU9Q" base_Component="_NAHEkIxFEeOcnasP0-fU9Q"/>
+  <JavaEEprofile:operatingsystem xmi:id="_681J0I-8EeOu0Y0OsMgVew" base_ExecutionEnvironment="_ScFPEI-oEeOu0Y0OsMgVew"/>
+  <JavaEEprofile:operatingsystem xmi:id="_Pmya8I--EeOu0Y0OsMgVew" base_ExecutionEnvironment="_T3SBwI-oEeOu0Y0OsMgVew"/>
+  <JavaEEprofile:JavaEE7container xmi:id="_RrTQYI--EeOu0Y0OsMgVew" base_ExecutionEnvironment="_XtAWII-oEeOu0Y0OsMgVew"/>
+  <JavaEEprofile:EAR xmi:id="_4zelwI--EeOu0Y0OsMgVew" base_Artifact="_bU-gYI--EeOu0Y0OsMgVew"/>
+  <standard:Document xmi:id="_PqIX8I_AEeOu0Y0OsMgVew" base_Artifact="_LgUC4I_AEeOu0Y0OsMgVew"/>
+  <standard:Subsystem xmi:id="_RiFAUM_8EeSFhbhURo14kw" base_Component="_K4AVAM_8EeSFhbhURo14kw"/>
+</xmi:XMI>
