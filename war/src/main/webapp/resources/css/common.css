@@ -5,14 +5,150 @@ body {
   margin: 0;
 }
 
-/* main <nav> element, in */
-.navbar-inverse {
-  background-color: hsl(0,0%,13%);
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
+
+/*================
+ * navigation bar
+ *================*/
+
+nav {
+  font-size: 90%;
+  position: relative; /* for positioning the menu items on a narrow screen */
+}
+
+/* a list of navigation items */
+nav ul {
+  display: flex;
+
+  /* Remove the usual decoration. */
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* navigation item */
+nav ul > li {
+  display: flex;
+  align-items: center; /* align on their center lines */
+}
+
+/* branding at the start of the navigation bar */
+nav > ul[role=menubar] > li.brand {
+  font-size: 120%;
+  margin-right: auto;
+}
+
+/* a link in the navigation */
+nav a[href] {
+  text-decoration: none; /* remove the usual decoration */
+
+  /* Make it an easy-to-hit block element. */
+  padding: 1em;
+  display: block;
+
+  width: 100%; /* fill the whole <li>, esp. for small screens, when the menu is below the nav bar */
+}
+
+
+/* the navigation menu button, for small displays */
+
+/* The navigation menu button constructed from CSS. */
+label[for=nav-menu] {
+  display: none; /* hidden by default, i.e., for large displays */
+  padding: 0.4rem;
+  margin: 0.3rem;
+  background-color: hsl(210, 100%, 95%);
+  cursor: pointer;
+  border-radius: 5%;
+  box-shadow: 0.07rem 0.15rem 0.15rem hsla(0, 0%, 100%, 0.8) inset,
+              -0.07rem -0.07rem 0.15rem hsla(0, 0%, 0%, 0.8) inset; /* Make it look raised. */
+}
+label[for=nav-menu]:hover {
+  background-color: hsl(210, 100%, 92%);
+}
+label[for=nav-menu] .icon-bar {
+  display: block;
+  width: 15px;
+  height: 3px;
+  border-radius: 1px;
+  background-color: hsl(0, 0%, 25%);
+  margin: 3px;
+}
+
+/* the navigation menu button when the (invisible) checkbox is checked */
+input#nav-menu[type="checkbox"]:checked ~ label[for=nav-menu] {
+  box-shadow: 0 -0.15rem 0.3rem hsla(0, 0%, 0%, 0.2) inset,
+              0 0.07rem 0.15rem hsla(0, 0%, 0%, 0.8) inset; /* Make it look pressed. */
+}
+
+/* On small displays, swap the navigation menu button for the menu. */
+@media screen and (max-width: 32ex) {
+
+  /* The navigation menu button. */
+  label[for=nav-menu] {
+    display: block; /* show it */
+  }
+
+  /* The top-level menu. */
+  nav ul.top-level[role=menu] {
+    display: none;  /* hide it */
+  }
+
+  /* The top-level menu when the (invisible) checkbox is checked. */
+  input#nav-menu[type="checkbox"]:checked ~ ul.top-level[role=menu] {
+
+  	/* show it, with the page showing through */
+    display: flex;
+    opacity: 0.98;
+
+    /* arrange vertically, below the nav header, full-width */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  /* navigation menu items when the (invisible) checkbox is checked, and "inverse" stying as used */
+  nav.inverse ul.top-level[role=menu] li[role=menuitem] {
+    background-color: hsl(0,0%,13%);  /* fallback */
+    background-image: linear-gradient( hsl(0,0%,20%), hsl(0,0%,13%) 2px, hsl(0,0%,13%) calc(100% - 2px), hsl(0,0%,0%) );
+  }
+
+  nav.inverse ul.top-level[role=menu] li[role=menuitem]:hover {
+    background-color: hsl(0,0%,20%);  /* fallback */
+    background-image: linear-gradient( hsl(0,0%,40%), hsl(0,0%,20%) 2px, hsl(0,0%,20%) calc(100% - 2px), hsl(0,0%,0%) );
+  }
+
+}
+
+
+/* "inverse" color scheme */
+
+nav.inverse,
+nav.inverse ul.top-level[role=menu]  /* for when the top-level menu displays outside the nav header */
+{
+  background-color: hsl(0,0%,13%);
+}
+
+nav.inverse,
+nav.inverse a	/* to override the browser's link style */
+{
+  color: darkgray;
+}
+
+nav.inverse a:hover, nav.inverse a:focus
+{
+  color: white;
+}
+
+nav.inverse li[role=menuitem]:hover {
+  background-color: hsl(0,0%,20%);
+}
+
 
 .list-header { background: silver; }
 .rf-dt-shdr-c { background: silver; } /* Why doesn't RF respect the headerClass attribute? */

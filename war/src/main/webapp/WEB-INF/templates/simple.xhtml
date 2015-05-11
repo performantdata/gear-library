@@ -19,15 +19,26 @@
 <body jsf:id="body">
   <ui:debug hotkey="x" rendered="#{initParam['javax.faces.FACELETS_DEVELOPMENT']}"/>
 
-  <header>
-    <a id="top"></a>
-    <h1>#{bundle['application.organization.name']} #{bundle['application.name']}</h1>
-  </header>
-  <nav class="navbar-inverse">
-    <ul>
-      <li><a href="login">Log in</a></li>
+  <a id="top"></a>
+  <nav class="inverse">
+    <ul role="menubar">
+      <li class="brand" role="menuitem">
+        <a href="#{request.contextPath}/">#{bundle['application.navigation.brand']}</a>
+      </li>
+      <li>
+        <input type="checkbox" id="nav-menu" style="display: none;"/>
+        <label for="nav-menu" title="#{bundle['application.navigation.nav_menu_button_title']}" role="button">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </label>
+        <ul role="menu" class="top-level">
+          <li role="menuitem"><a href="#{request.contextPath}/login">Log in</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
+
   <main>
     <ui:insert name="content"/>
   </main>
