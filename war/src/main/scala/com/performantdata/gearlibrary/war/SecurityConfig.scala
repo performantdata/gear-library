@@ -14,7 +14,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity
   * 
   * @author Michael
   */
-@Configuration
 @EnableWebSecurity(debug=true)
 class SecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -29,7 +28,7 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
   protected override def configure(http: HttpSecurity): Unit = {
     http
       .authorizeRequests()
-        .antMatchers("/javax.faces.resource/**").permitAll()
+        .antMatchers("/javax.faces.resource/**", "/index.xhtml", "/gear/index.xhtml").permitAll()
         .anyRequest().authenticated()
       .and()
       .formLogin.loginPage("/login").permitAll()

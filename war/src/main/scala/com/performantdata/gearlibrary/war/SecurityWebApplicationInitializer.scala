@@ -9,5 +9,6 @@ import org.springframework.security.web.context.AbstractSecurityWebApplicationIn
   * 
   * @author Michael
   */
+/* Not using Spring, so need to pass the configuration class. */
 class SecurityWebApplicationInitializer
   extends AbstractSecurityWebApplicationInitializer(classOf[SecurityConfig]) {}
